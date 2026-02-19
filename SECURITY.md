@@ -1,34 +1,25 @@
 # Security Policy
 
-## 🛡️ Supported Versions
-
-We actively provide security updates for the following versions of the ABA-HRF toolkit.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.x     | ✅ Yes             |
-| < 1.0   | ❌ No              |
-
 ## 📝 Reporting a Vulnerability
 
-As this is an Academic Research Project focused on malware analysis, we take security very seriously. If you discover a vulnerability within our analysis tools or documentation that could lead to unintended code execution outside of a sandbox environment, please follow these steps:
+This project is a **proof-of-concept for educational purposes only**. It is not intended for use in any production or real-world financial system.
 
-- **Do not open a public Issue.** This is to prevent the exploitation of the vulnerability before a patch is available.  
-- **Submit a Detailed Report.** Send your findings to the maintainer via the secure communication channel listed in the project's profile (or use the GitHub "Report Vulnerability" feature if enabled).  
-- **Include Reproduction Steps.** Provide a clear description of the issue, the potential impact, and a step-by-step guide to reproduce the behavior.
+As such, it is expected to have numerous security limitations and vulnerabilities by design. These are intentional to keep the code simple and understandable for learners.
+
+### What to report
+
+You should **only** report an issue if you find a bug that **breaks the core educational logic** described in the README (e.g., a flaw in the PoW validation or signature verification that makes the provided examples behave incorrectly).
+
+### What not to report
+
+Please **do not** report issues related to:
+- Lack of P2P networking
+- Absence of a mempool
+- Scalability or performance problems
+- Theoretical cryptographic attacks that are beyond the scope of this simple demo
 
 ## ⏳ Our Process
 
-- **Acknowledgment**: We will acknowledge receipt of your report within 48–72 hours.  
-- **Investigation**: Our team will investigate the issue in an isolated environment.  
-- **Resolution**: If the vulnerability is confirmed, we will work on a fix and coordinate a public disclosure date with you.
+Since this is a static educational project, we do not provide active security patches. Any valid reports regarding broken core logic will be reviewed and may be fixed in a future commit for the benefit of learners.
 
-## ⚠️ Safe Harbor Strategy
-
-This project is strictly for **Defensive Research**. We encourage security researchers to audit our tools, provided that:
-
-- You do not use these tools for any illegal activity.  
-- Your research is conducted in a strictly isolated (air-gapped) laboratory environment.  
-- You comply with [GitHub’s Acceptable Use Policy](https://docs.github.com/en/site-policy/acceptable-use-policies) regarding the handling of sensitive code.
-
-Thank you for helping keep the security research community safe!
+Thank you for your understanding!

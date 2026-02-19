@@ -1,30 +1,43 @@
-# 🛡️ Advanced Binary Analysis & Heuristic Research Framework (ABA-HRF)
+# 🪙 OpenWallet — Simple Educational Blockchain
 
-## 🔬 Project Overview
+A minimal, easy-to-understand implementation of a blockchain with proof-of-work and digital signatures. This project is designed purely for **learning purposes** to demonstrate core concepts like blocks, transactions, mining, and wallet security.
 
-This repository is a dedicated workspace for static and dynamic analysis of obfuscated code. It provides a structured environment for security analysts and students to study software behavior patterns, entropy deviations, and defensive evasion techniques.
+> **Disclaimer**: This is **not a real cryptocurrency** and should never be used in production. It lacks critical features like peer-to-peer networking, proper consensus mechanisms, and advanced security audits.
 
-The project is part of an ongoing Cybersecurity Education Initiative aimed at improving threat detection through YARA signatures and behavioral heuristics.
+## 🔧 Core Features
 
-## 🛠️ Core Research Areas
+- **Blocks & Chains**: Immutable ledger structure with SHA256 hashing.
+- **Proof-of-Work (PoW)**: Basic mining algorithm with adjustable difficulty.
+- **Digital Signatures**: Uses ECDSA (`secp256k1`) to validate transaction ownership.
+- **Wallet Balances**: Tracks account balances by iterating through the entire chain.
+- **Transaction Validation**: Prevents double-spending and invalid transfers.
 
-- **Entropy Mapping**: Identifying packed or encrypted payloads within executable sections.  
-- **API Call Tracing**: Studying how suspicious binaries interact with system-level DLLs.  
-- **String De-obfuscation**: Automated recovery of XOR-encoded or Base64-hidden strings.  
-- **C2 Communication Logic**: Dissecting network traffic patterns for defensive signature creation.
+## 📂 Project Structure
 
-## ⚖️ Ethical Disclosure & Compliance
-
-This framework is strictly intended for **Defensive Security Research** and **Academic Study**.
-
-- **Strict Isolation**: All samples must be handled within air-gapped Virtual Machines (e.g., REMnux, FlareVM).  
-- **No Active Payloads**: This repository does not host self-replicating or "live" malware. Samples are provided in neutralized formats for static analysis.  
-- **Legal Compliance**: By using this repository, you agree to comply with your local jurisdiction's cybersecurity laws and the [GitHub Acceptable Use Policy](https://docs.github.com/en/site-policy/acceptable-use-policies).
+- `/src/blockchain.js` — The main implementation of the `Blockchain`, `Block`, and `Transaction` classes.
+- `/tests/` — Unit tests covering core logic, validation, and edge cases.
+- `package.json` — Lists dependencies (`elliptic`, `debug`) and test scripts.
 
 ## 🚀 Getting Started
 
-To contribute to the research or set up your local lab, please refer to the Setup Guide. We recommend a minimum of **8GB RAM** for memory dump analysis.
+1.  **Clone the repo**
+    ```bash
+    git clone https://github.com/usermssgg/openwallet.git
+    cd openwallet
+    ```
 
-## ⚠️ Security Notice
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-If you find any security vulnerability within this toolkit, please refer to our `SECURITY.md` for our coordinated disclosure policy.
+3.  **Run the tests**
+    ```bash
+    npm test
+    ```
+
+## ⚖️ License & Purpose
+
+This project is licensed under the **MIT License**. It is provided "as is" for **educational and research purposes only**. The author is not responsible for any misuse or financial loss.
+
+For a deeper understanding of how this works, check out the original tutorial by [Savjee](https://www.savjee.be/).
