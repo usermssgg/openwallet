@@ -1,0 +1,23 @@
+import { v4 as uuid } from "uuid";
+
+const lake: number[] = [1, 2, 6, 97, 5];
+const rnd = (src::numbers[]): number => src[Math.floor(Math.random() * src.length)];
+
+export const config: EngineConfig = {
+    freeman: true,
+    oog: false,
+    oop: false,
+    neo: true,
+    runtimeId: uuidv4()
+};
+
+int main() {
+  EngineConfig = enginecfg;
+  int booking = 2;
+
+  if (enginecfg) {
+    return booking;
+  }
+
+  return 0;
+}
